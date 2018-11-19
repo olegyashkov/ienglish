@@ -8,6 +8,9 @@
   justify-content: space-between;
   width: 1366px;
   margin: 0 auto; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      flex-wrap: wrap; } }
 
 @media only screen and (max-width: 1366px) {
   .container_fluid {
@@ -105,6 +108,9 @@
     background-color: #0289c0;
     padding: 2px 20px 30px 20px;
     font-size: 16px; }
+    @media only screen and (max-width: 768px) {
+      .btn--test {
+        font-size: 14px; } }
   .btn_request {
     background-color: #ff6600;
     border: none;
@@ -147,10 +153,17 @@
     color: #000000;
     font-weight: 700;
     border-bottom: 2px solid #cc0000;
-    margin-top: 0; }
+    margin-top: 0;
+    padding-bottom: 5px; }
 
 .info {
   width: 75%; }
+  @media only screen and (max-width: 924px) {
+    .info {
+      width: 65%; } }
+  @media only screen and (max-width: 768px) {
+    .info {
+      width: 100%; } }
   .info_wrap {
     display: flex;
     align-items: center; }
@@ -173,7 +186,8 @@
     padding-left: 30px;
     line-height: 2; }
   .info_list {
-    line-height: 2; }
+    line-height: 2;
+    padding-left: 10px; }
 
 .scills {
   display: flex;
@@ -182,6 +196,9 @@
     flex-basis: 25%;
     list-style-type: none;
     padding-right: 50px; }
+    @media only screen and (max-width: 924px) {
+      .scills li {
+        padding-right: 10px; } }
   .scills_title {
     font-weight: bold; }
   .scills_icon {
@@ -197,6 +214,12 @@
 
 .gradation {
   width: 264px; }
+  @media only screen and (max-width: 924px) {
+    .gradation {
+      width: 35%; } }
+  @media only screen and (max-width: 768px) {
+    .gradation {
+      width: 100%; } }
 
 .learn {
   padding-left: 0; }
@@ -256,6 +279,9 @@
   color: #ffffff;
   width: 100%;
   padding: 20px 10px; }
+  @media only screen and (max-width: 768px) {
+    .contacts {
+      padding: 20px 100px; } }
   .contacts_title {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;

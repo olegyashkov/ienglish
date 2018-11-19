@@ -24,11 +24,15 @@ $gray-color:#5c5c5c;
 	// align-items: center;
 	width: 1366px;
 	margin: 0 auto;
+	@media only screen and (max-width: 768px) {
+		flex-wrap:wrap;
+	}
 }
 .container_fluid {
 	@media only screen and (max-width: 1366px) {
 		width: 86%;
 	}
+	
 }
 
 .header {
@@ -141,6 +145,9 @@ $gray-color:#5c5c5c;
 		background-color: $blue-general;
 		padding: 2px 20px 30px 20px;
 		font-size: 16px;
+		@media only screen and (max-width: 768px) {
+			font-size: 14px;
+		}
 
 	}
 	&_request {
@@ -196,10 +203,18 @@ $gray-color:#5c5c5c;
 		font-weight: 700;
 		border-bottom: 2px solid $red-color;
 		margin-top: 0;
+		padding-bottom: 5px;
 	}
 }
 .info {
 	width: 75%;
+	@media only screen and (max-width: 924px) {
+		width: 65%;
+	}
+
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	}
 	&_wrap {
 		display: flex;
 		align-items: center;
@@ -228,6 +243,7 @@ $gray-color:#5c5c5c;
 	}
 	&_list {
 		line-height: 2;
+		padding-left: 10px;
 	}
 }
 .scills {
@@ -237,6 +253,9 @@ $gray-color:#5c5c5c;
 		flex-basis:25%;
 		list-style-type: none;
 		padding-right: 50px;
+		@media only screen and (max-width: 924px) {
+			padding-right: 10px;
+		}
 		
 
 	}
@@ -260,6 +279,12 @@ $gray-color:#5c5c5c;
 }
 .gradation {
 	width: 264px;
+	@media only screen and (max-width: 924px) {
+		width: 35%;
+	}
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+	}
 }
 .learn {
 	padding-left: 0;
@@ -350,6 +375,9 @@ $gray-color:#5c5c5c;
 	color: #ffffff;
 	width: 100%;
 	padding: 20px 10px;
+	@media only screen and (max-width: 768px) {
+		padding: 20px 100px;
+	}
 	&_title {
 		font-family: 'Open Sans', sans-serif;
 		font-size: 18px;
