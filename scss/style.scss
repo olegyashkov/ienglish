@@ -32,6 +32,13 @@ $gray-color:#5c5c5c;
 	@media only screen and (max-width: 1366px) {
 		width: 86%;
 	}
+	@media only screen and (max-width: 736px) {
+		justify-content: center;
+	}
+
+	@media only screen and (max-width: 414px) {
+		width: 92%;
+	}
 	
 }
 
@@ -52,6 +59,9 @@ $gray-color:#5c5c5c;
 		@media only screen and (max-width: 830px) {
 			width: 70%;
 		}
+		@media only screen and (max-width: 572px) {
+			justify-content: flex-end;
+		}
 	}
 	&_nav {
 		display: flex;
@@ -62,18 +72,38 @@ $gray-color:#5c5c5c;
 		font-size: 14px;
 		@media only screen and (max-width: 1300px) {
 			display: none;
+
+		}
+		&_active {
+			display: flex;
+			justify-content: space-around;
+			position: absolute;
+			right: 0;
+			top: 50px;
+			background-color: #ffffff;
+			@media only screen and (max-width: 580px) {
+				width: 100%;
+			}
+			& li {
+				// display: inline-block;
+			}
 		}
 		li {
 			list-style-type: none;
+
 			a {
 				text-decoration: none;
 				color: $text-dark;
+				&:hover {
+					color: $blue-general;
+				}
 				&:first-letter {
 					text-transform: uppercase;
 				}
 			}
 		}
 	}
+
 
 	&_mobile {
 		display: none;
@@ -118,9 +148,34 @@ $gray-color:#5c5c5c;
 		&_menu {
 			display: block;
 		}
+
 	}
 	
 	
+}
+.header_mobile.active .header_mobile_crossed {
+	display: block;
+	& span {
+		position:absolute;
+		margin: 0;
+		width: 100%;
+		&:first-child {
+		-moz-transform: rotateZ(45deg);
+		-webkit-transform: rotateZ(45deg);
+		-ms-transform: rotateZ(45deg);
+		transform: rotateZ(45deg);
+	}
+	&:last-child {
+		-moz-transform: rotateZ(-45deg);
+		-ms-transform: rotateZ(-45deg);
+		-webkit-transform: rotateZ(-45deg);
+		transform: rotateZ(-45deg);
+	}
+	}
+	
+}
+.header_mobile.active .header_mobile_menu {
+	display: none;
 }
 .btn {
 	font-size: 13px;
@@ -132,13 +187,29 @@ $gray-color:#5c5c5c;
 	&--login {
 		color: $text-green;
 		border:1px solid $text-green;
+		&:hover {
+			background-color: $text-green;
+			color: #ffffff;
+		}
 		@media only screen and (max-width: 1300px) {
 			margin-right: 30px;
 		}
+
+		@media only screen and (max-width: 572px) {
+			display: none;
+		}
+
 	}
 	&--lesson {
 		color: $orange;
 		border:1px solid $orange;
+		&:hover {
+			background-color: $orange;
+			color:#ffffff;
+		}
+		@media only screen and (max-width: 572px) {
+			display: none;
+		}
 	}
 	&--test {
 		color: #ffffff;
@@ -147,6 +218,10 @@ $gray-color:#5c5c5c;
 		font-size: 16px;
 		@media only screen and (max-width: 768px) {
 			font-size: 14px;
+		}
+
+		@media only screen and (max-width: 400px) {
+			font-size: 10px;
 		}
 
 	}
@@ -188,6 +263,11 @@ $gray-color:#5c5c5c;
 	font-size: 30px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
+
+	@media only screen and (max-width: 590px) {
+		font-size: 24px;
+		text-align: center;
+	}
 	&--black {
 		color: #000000;
 		margin-top: 30px;
@@ -218,6 +298,9 @@ $gray-color:#5c5c5c;
 	&_wrap {
 		display: flex;
 		align-items: center;
+		@media only screen and (max-width: 524px) {
+			flex-direction:column;
+		}
 	}
 	&_begin {
 		display: flex;
@@ -240,6 +323,10 @@ $gray-color:#5c5c5c;
 		width: 75%;
 		padding-left: 30px;
 		line-height: 2;
+		@media only screen and (max-width: 524px) {
+			width: 100%;
+			padding-left: 0;
+		}
 	}
 	&_list {
 		line-height: 2;
@@ -248,23 +335,35 @@ $gray-color:#5c5c5c;
 }
 .scills {
 	display: flex;
+	flex-wrap:wrap;
 	padding-left: 0;
 	& li {
-		flex-basis:25%;
+		width:25%;
 		list-style-type: none;
 		padding-right: 50px;
 		@media only screen and (max-width: 924px) {
 			padding-right: 10px;
+		}
+		@media only screen and (max-width: 570px) {
+			width:50%;
+			
 		}
 		
 
 	}
 	&_title {
 		font-weight: bold;
+		@media only screen and (max-width: 568px) {
+			display: block;
+			text-align: center;
+		}
 	}
 	&_icon {
 		display: block;
 		width: 80px;
+		@media only screen and (max-width: 568px) {
+			margin:0 auto;
+		}
 		img {
 			width: 100%;
 		}
@@ -377,6 +476,9 @@ $gray-color:#5c5c5c;
 	padding: 20px 10px;
 	@media only screen and (max-width: 768px) {
 		padding: 20px 100px;
+	}
+	@media only screen and (max-width: 540px) {
+		padding: 20px;
 	}
 	&_title {
 		font-family: 'Open Sans', sans-serif;
